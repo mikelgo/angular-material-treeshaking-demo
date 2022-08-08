@@ -2,7 +2,9 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "all-modules": "libs/all-modules",
     "demo-client": "apps/demo-client",
-    "demo-client-e2e": "apps/demo-client-e2e"
+    "demo-client-e2e": "apps/demo-client-e2e",
+    "scam-modules": "libs/scam-modules"
   }
 }

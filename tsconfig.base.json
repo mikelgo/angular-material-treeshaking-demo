@@ -14,7 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@treeshaking-material-demo/all-modules": [
+        "libs/all-modules/src/index.ts"
+      ],
+      "@treeshaking-material-demo/scam-modules": [
+        "libs/scam-modules/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

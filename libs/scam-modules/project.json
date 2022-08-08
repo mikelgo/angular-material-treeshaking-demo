@@ -1,0 +1,41 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/scam-modules/src",
+  "prefix": "treeshaking-material-demo",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/scam-modules"],
+      "options": {
+        "project": "libs/scam-modules/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/scam-modules/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/scam-modules/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/scam-modules"],
+      "options": {
+        "jestConfig": "libs/scam-modules/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/scam-modules/**/*.ts",
+          "libs/scam-modules/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

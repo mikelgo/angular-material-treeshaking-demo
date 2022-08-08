@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/demo-client",
         "index": "apps/demo-client/src/index.html",
@@ -17,7 +19,10 @@
           "apps/demo-client/src/favicon.ico",
           "apps/demo-client/src/assets"
         ],
-        "styles": ["apps/demo-client/src/styles.scss"],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/demo-client/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -82,7 +87,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/demo-client"],
+      "outputs": [
+        "coverage/apps/demo-client"
+      ],
       "options": {
         "jestConfig": "apps/demo-client/jest.config.ts",
         "passWithNoTests": true
